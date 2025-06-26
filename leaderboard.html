@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Game</a>
+    <a href="leaderboard.html">Leaderboard</a>
+  </nav>
+
+  <div class="leaderboard-container">
+    <h1>🏆 Leaderboard</h1>
+    <button onclick="toggleStyle()">Toggle Style</button>
+    <button onclick="toggleScores()">Show/Hide Scores</button>
+    <form onsubmit="filterScores(event)">
+      <input type="number" id="scoreInput" placeholder="Min Score..." />
+      <button type="submit">Filter</button>
+    </form>
+    <ul id="scoreList">
+      <li data-score="10">Player1 - 10</li>
+      <li data-score="7">Player2 - 7</li>
+      <li data-score="4">Player3 - 4</li>
+      <li data-score="9">Player4 - 9</li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleStyle() {
+      document.body.classList.toggle('alt-theme');
+    }
+
+    function toggleScores() {
+      const list = document.getElementById('scoreList');
+      list.style.display = list.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function filterScores(e) {
+      e.preventDefault();
+      const min = parseInt(document.getElementById('scoreInput').value) || 0;
+      document.querySelectorAll('#scoreList li').forEach(item => {
+        const score = parseInt(item.dataset.score);
+        item.style.display = score >= min ? 'list-item' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

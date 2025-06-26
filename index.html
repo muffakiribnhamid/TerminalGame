@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terminal Guess Game | Waffles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Game</a>
+    <a href="leaderboard.html">Leaderboard</a>
+  </nav>
+
+  <div class="terminal-window">
+    <h1>Terminal Guess Game | Waffles</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/3271/3271310.png" alt="Computer Icon" class="game-image">
+    <div id="terminal-output">Initializing game...</div>
+    <input id="userInput" type="number" min="1" max="10" placeholder="Enter code..." autofocus />
+    <button onclick="checkGuess()">Submit</button>
+    <button onclick="resetGame()">Restart</button>
+  </div>
+
+<footer>
+    <p>&copy; 2025 Terminal Guess Game | Made for Waffles. A Event By HackClub</p>
+</footer>
+
+  <canvas id="matrix"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

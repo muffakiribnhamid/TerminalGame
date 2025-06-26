@@ -1,0 +1,88 @@
+
+body {
+  margin: 0;
+  background: black;
+  color: #0f0;
+  font-family: monospace;
+}
+
+nav {
+  background: #111;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: #0f0;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.terminal-window, .leaderboard-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #0f0;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #0f0;
+}
+
+.game-image {
+  display: block;
+  margin: 10px auto;
+  width: 100px;
+}
+
+#terminal-output {
+  background: #111;
+  padding: 10px;
+  height: 120px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background: black;
+  color: #0f0;
+  border: 1px solid #0f0;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #003300;
+}
+
+canvas#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.alt-theme {
+  background-color: #fff;
+  color: #333;
+}
+
+.alt-theme nav, .alt-theme .leaderboard-container {
+  background: #eee;
+  color: #000;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #0f0;
+}
+
